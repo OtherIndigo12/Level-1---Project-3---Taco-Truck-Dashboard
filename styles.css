@@ -1,0 +1,141 @@
+#body {
+    animation-name: fadeIn;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    animation-duration: 1s;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+button, input {
+    transition: all 0.5s;
+    animation-name: fadeIn;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    animation-duration: 1s;
+
+}
+
+button:hover, input:hover {
+    transform: scale(1.2);
+}
+
+.open {
+    background-color: rgb(133, 206, 24);
+    padding: 7px;
+    border: 3px solid white;
+    border-radius: 12px;
+    color: white;
+}
+
+.closed {
+    background-color: red;
+    padding: 7px;
+    border: 3px solid white;
+    border-radius: 12px;
+    color: white;
+}
+
+.busy {
+    background-color: rgb(219, 170, 12);
+    padding: 7px;
+    border: 3px solid white;
+    border-radius: 12px;
+    color: white;
+}
+
+
+li {
+    color: white;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 1.3em;
+    font-weight: 300;
+    padding: 2px;
+}
+
+tr {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+
+td{
+    color: white;
+
+}
+
+.sold {
+    font-weight: bold;
+    color: white;
+    border: 3px solid white;
+    padding: 4px;
+    border-radius: 12px;
+    background-color: gray;
+    margin-right: 40px;
+}
+
+.sold:hover {
+    color: yellow;
+    border: 3px solid yellow;
+}
+
+.name {
+    font-weight: bold;
+    color: white;
+    border: 3px solid white;
+    padding: 6px;
+    border-radius: 12px;
+    background-color: blue;
+    margin-left: 40px;
+}
+
+.desc {
+    font-weight: bold;
+    color: white;
+    border: 3px solid white;
+    padding: 6px;
+    border-radius: 12px;
+    background-color: darkgreen;
+}
+
+.name:hover, .desc:hover {
+    font-weight: bold;
+    color: yellow;
+    border: 3px solid yellow;
+    padding: 6px;
+    border-radius: 12px;
+}
+
+.done, .done2 {
+    font-weight: bold;
+    color: black;
+    text-decoration: line-through;
+    background-color: lightgray;
+    border: 3px solid white;
+    padding: 6px;
+    border-radius: 12px;
+}
+
+.hideH3 {
+    display: none;
+}
+
+.hideH32 {
+    display: none;
+}
+
+.newSales {
+    background-color: rgb(207, 90, 109);
+}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Isaiah's Taco Truck</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body id="body" class="bg-sky-500">
+    <header class="bg-blue-500">
+        <div>
+            <h1 class="flex items-center justify-center md:text-4xl font-bold p-7 text-lime-300 sm:text-2xl">Isaiah's Taco Truck</h1>
+            <div class="flex items-center justify-center gap-10 pb-6 group-hover:border-yellow-300">
+                <p class="closed" id="status" class="text-base text-white font-inter font-semibold">Closed!</p>
+                <button id="status-change" class="group hover:border-yellow-300 bg-gray-500 p-2 rounded-xl border-3 border-white"><p class="group-hover:text-yellow-300 text-white font-inter font-semibold">Change Status!</p></button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <h2 class="flex items-center justify-center p-5 text-white md:text-2xl sm:text-xl font-bold">The Menu:</h2>
+        <label class="flex justify-center font-inter font-bold text-white md:text-xl sm:text-base">Enter Menu Items Here!</label>
+
+        <div class="grid md:grid-cols-2 sm:grid-cols-1 items-center gap-y-4 max-w-2xl mx-auto p-5">
+            <label class="font-inter text-center font-semibold text-white md:text-lg sm:text-base">Food Name:</label>
+            <label class="font-inter text-center font-semibold text-white md:text-lg sm:text-base">Description:</label>
+
+            <div class="flex justify-center">
+                <input id="name-item" type="text" placeholder="Enter Name Here..." class="md:w-52 sm:w-12 border p-2 bg-white border-4 border-lime-500">
+            </div>
+
+            <div class="flex justify-center">
+                <input id="desc-item" type="text" placeholder="Enter Description Here..." class="md:w-52 sm:w-12 border p-2 bg-white border-4 border-lime-500">
+                <button id="menu-button" class="font-inter font-semibold border p-3 ml-7 text-white border-3 border-white bg-gray-500 rounded-xl hover:text-yellow-300 hover:border-yellow-300">Add</button>
+            </div>
+        </div>
+        
+        <div class="grid grid-col-1 md:grid-cols-2 md:mt-10 sm:mt-6 items-start">
+            <section class="w-full">
+                <h2 class="flex items-center justify-center mx-auto p-4 font-inter font-semibold text-white md:text-3xl sm:text-2xl border-3 border-white rounded-xl bg-sky-600 w-fit">Full Menu:</h2>
+                <div class="grid grid-cols-3 items-center gap-y-4 mx:auto p-5">
+                    <h2 class="font-inter md:text-2xl sm:text-xl font-bold text-white ml-10">Sold Count:</h2>
+                    <h2 id="soldCount" class="text-white text-2xl bg-gray-800 border-2 border-white w-fit p-5 rounded-xl">0</h2>
+                    <p id="saleCheck" class="text-white font-inter font-semibold mr-4">No Sales So Far...</p>
+                </div>
+                
+                <table id="table" class="mx-auto w-full max-w-2xl">
+                    <tr class="border-3 border-white rounded-xl bg-lime-500 p-3 ml-10 mr-10">
+                        <td class="font-inter font-bold md:text-lg sm:text-sm ml-10">Name</td>
+                        <td class="font-inter font-bold md:text-lg sm:text-sm ml-10">Description</td>
+                        <td class="font-inter font-bold md:text-lg sm:text-sm ml-10 mr-10">Sales</td>
+                    </tr>
+                </table>
+                <h3 id="hide2" class="font-inter font-semibold text-white md:text-base sm:text-sm flex justify-center mt-5">No Menu Added So Far...</h3>
+
+            </section>
+
+            <section class="md:ml-30 sm:ml-10">
+                <h2 class="flex ml-40 md:pt-3 sm:pt-1 text-white md:text-2xl sm:text-xl font-bold mt-8 border-3 border-white rounded-xl bg-sky-600 w-fit p-4">Todays Location:</h2>
+
+                <div id="location" class="flex flex-col gap-3 ml-40 pt-5">
+                    <label class="font-inter font-semibold text-white md:text-lg sm:text-base pd-5">Enter the Location Here!</label>
+                    <div class="flex items-center gap-3">
+                        <input id="new-item" type="text" placeholder="Enter Location Here..." class="border p-2 bg-white border-5 border-lime-500">
+                        <button id="add-button" class="font-inter font-semibold border px-3 py-1 text-white border-3 border-white bg-gray-500 rounded-xl hover:text-yellow-300 hover:border-yellow-300">Add</button>
+                    </div>
+                </div>
+
+                <div class="ml-40 pt-5">
+                    <h3 class="font-inter font-semibold text-white md:text-3xl sm:text-xl p-3 mb-2 rounded-xl border-3 border-white bg-lime-500 w-fit">Locations:</h3>
+                    <h3 id="hide" class="font-inter font-semibold text-white md:text-base sm:text-sm">No Locations Added So Far...</h3>
+                    <ul id="locList" class="list-none m-0 p-0 align-center"></ul>
+                </div>
+                
+
+            </section>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
